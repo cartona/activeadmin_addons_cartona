@@ -1,6 +1,6 @@
 import 'jquery-datetimepicker';
 import './vendor/jquery_palette_color_picker/palette-color-picker';
-// import 'intlTelInput.min';
+import 'intlTelInput.min';
 
 import './config';
 import './inputs/slim-select';
