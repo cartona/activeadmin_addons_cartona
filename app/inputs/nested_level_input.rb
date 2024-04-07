@@ -20,7 +20,7 @@ class NestedLevelInput < ActiveAdminAddons::SelectInputBase
     load_data_attr(:fields, default: ["name"], formatter: :to_json)
     load_data_attr(:predicate, default: "cont")
     load_data_attr(:filters)
-    load_data_attr(:model, value: model_name)
+    load_data_attr(:model, value: object_name)
     load_data_attr(:display_name, default: "name")
     load_data_attr(:minimum_input_length, default: 1)
     load_data_attr(:url, default: url_from_method)
