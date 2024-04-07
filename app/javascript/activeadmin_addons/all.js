@@ -11,5 +11,6 @@ import './inputs/selected-list';
 import './inputs/date-time-picker';
 import './inputs/color-picker';
 import './inputs/tel';
+import './inputs/json';
 import './addons/toggle_bool';
 import './addons/interactive_select_tag';

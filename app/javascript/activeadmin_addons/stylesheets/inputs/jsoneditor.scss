@@ -1,0 +1,23 @@
+div.jsoneditor-tree button.jsoneditor-button,
+div.jsoneditor-tree button.jsoneditor-dragarea,
+div.jsoneditor-tree .jsoneditor-button.jsoneditor-schema-error,
+.jsoneditor-text-errors tr .jsoneditor-schema-error,
+.jsoneditor-text-errors tr.parse-error .jsoneditor-schema-error,
+div.jsoneditor-contextmenu div.jsoneditor-icon,
+div.jsoneditor-contextmenu ul li button div.jsoneditor-expand,
+div.jsoneditor-menu > button,
+// div.jsoneditor-menu > div.jsoneditor-modes > button,
+table.jsoneditor-search button,
+div.jsoneditor-statusbar > .jsoneditor-validation-error-icon,
+div.jsoneditor-statusbar > .jsoneditor-parse-error-icon {
+  background-image: asset-url('jsoneditor-icons.svg') !important;
+  // background-color: transparent !important;
+}
+
+div.jsoneditor-menu {
+  background-color: $am-theme-primary !important;
+}
+
+table.jsoneditor-search input {
+  padding: 0 !important;
+}
