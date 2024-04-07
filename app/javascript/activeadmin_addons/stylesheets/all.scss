@@ -1,14 +1,24 @@
+@import 'select2';
 @import 'imports/jquery-datepicker';
 @import 'vendor/palette-color-picker';
-@import 'imports/slimselect';
-
-$error-color: #932419;
+@import 'intlTelInput.min';
+@import 'jsoneditor.min';
 
 @import 'inputs/numeric-range-filter';
 @import 'inputs/date-time-picker-filter';
 @import 'inputs/color-picker';
 @import 'inputs/date-time-picker';
+@import 'inputs/select2';
 @import 'inputs/selected-list';
-@import 'inputs/slim-select';
+@import 'inputs/tel';
+@import 'inputs/jsoneditor';
 @import 'addons/toggle_bool';
 @import 'addons/interactive_select_tag';
+
+$error-color: #932419;
+
+li.error {
+  .select2-selection {
+    border-color: $error-color;
+  }
+}
