@@ -41,7 +41,7 @@ module ActiveAdminAddons
     end
 
     def input_value
-      @input_value ||= valid_object.send(valid_method)
+      @input_value ||= !valid_object.nil? ? valid_object.send(valid_method) : ''
     end
 
     def input_association_value
