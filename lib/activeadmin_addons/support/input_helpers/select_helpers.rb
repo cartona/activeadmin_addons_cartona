@@ -14,8 +14,8 @@ module ActiveAdminAddons
     end
 
     def initial_collection_to_select_options
-      initial_options = [[nil]] # add blank option
-      selected = selected_item if method_model != NilClass
+      initial_options = [] # add blank option
+      selected = selected_item
 
       if selected
         selected_option = item_to_select_option(selected)
@@ -57,21 +57,19 @@ module ActiveAdminAddons
     end
 
     def selected_collection
-      @selected_collection ||= begin
-        if active_record_relation?(collection)
-          collection.model.where(id: input_value)
-        else
-          method_model.where(id: input_value)
-        end
-      end
+      @selected_collection ||= if active_record_relation?(collection)
+                                 collection.model.where(id: input_value)
+                               else
+                                 method_model.where(id: input_value)
+                               end
     end
 
     def selected_item
       @selected_item ||= begin
-                           input_association_value
-                         rescue NoMethodError
-                           selected_collection.first
-                         end
+        input_association_value
+      rescue NoMethodError
+        selected_collection.first
+      end
     end
 
     private
