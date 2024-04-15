@@ -1,7 +1,7 @@
 module ActiveAdminAddons
   module InputMethods
     def model_name
-      valid_object.class.to_s.underscore.tr('/', '_')
+      valid_object ? valid_object.class.to_s.underscore.tr('/', '_') : builder.object_name
     end
 
     def valid_method
@@ -25,9 +25,9 @@ module ActiveAdminAddons
     end
 
     def method_model
-      @options[:method_model] ||
-      object_class.reflect_on_association(association_name).try(:klass) ||
-      association_name.classify.constantize
+      klass_without_namespace = association_name.classify.safe_constantize
+      klass_with_namespace = "#{@object.class.module_parent}::#{association_name.classify}".safe_constantize
+      @options[:method_model] || object_class.reflect_on_association(association_name).try(:klass) || klass_without_namespace || klass_with_namespace
     end
 
     def tableize_method
