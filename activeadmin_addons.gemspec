@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "pry-byebug"
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "puma"
-  s.add_development_dependency "rails", "~> 6.1", ">= 6.1.4.4"
+  s.add_development_dependency "rails", ">= 6.1"
   s.add_development_dependency "rexml"
   s.add_development_dependency "rspec_junit_formatter"
   s.add_development_dependency "rspec-rails"
